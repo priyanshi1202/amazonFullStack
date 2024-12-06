@@ -3,6 +3,10 @@ const productsdata= require("./constant/productsdata");
 
 const DefaultData = async()=>{
     try{
+
+        await Products.deleteMay({});
+
+
         const storeData = await Products.insertMany(productsdata);
         console.log(storeData);
     }catch(error){
@@ -11,4 +15,4 @@ const DefaultData = async()=>{
 };
 
 
-module.exports = DefaultData();
+module.exports = DefaultData;
